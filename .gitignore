@@ -1,0 +1,51 @@
+# ------------------------
+# Python
+# ------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+env/
+venv/
+.venv/
+ENV/
+
+# ------------------------
+# Logs and cache
+# ------------------------
+*.log
+*.tmp
+*.DS_Store
+.cache/
+*.egg-info/
+.ipynb_checkpoints/
+
+# ------------------------
+# Application-specific
+# ------------------------
+
+# Ignore occupancy log file (generated during runtime)
+occupancy.txt
+
+# Ignore saved images (runtime outputs)
+static/
+!static/.gitkeep   # keep the folder but ignore its contents
+
+# YOLO model weights (large files)
+*.pt
+
+# Training data and datasets
+datasets/
+*.zip
+*.tar
+*.gz
+*.csv
+*.xlsx
+
+# ------------------------
+# IDE / Editor
+# ------------------------
+.vscode/
+.idea/
