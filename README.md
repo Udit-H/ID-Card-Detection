@@ -8,4 +8,5 @@ This project is a **smart lab entry management system** that combines **YOLOv8-b
 - Flask-based web dashboard for monitoring occupancy  
 - Configurable maximum occupancy limit (default: 50)  
 - Automatic snapshot saving of detected ID cards  
-- Real-time occupancy logging with `occupancy.txt`  
+- Real-time occupancy logging
+  
