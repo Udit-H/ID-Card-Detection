@@ -1,0 +1,5 @@
+train: iddetection_filtered/train/images
+val: iddetection_filtered/valid/images
+test: iddetection_filtered/test/images
+nc: 1
+names: ['ID-Card-Face']

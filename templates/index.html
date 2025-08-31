@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ID Card Detection Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        th {
+            text-align: left !important;
+        }
+        td {
+            text-align: left !important;
+        }
+    </style>
+</head>
+<body class="container mt-4">
+    <h1 class="mb-4">ID Card Detection Dashboard</h1>
+    <h3 class="mb-3">Current Lab Occupancy: <span class="badge bg-info text-dark">{{ occupancy }}</span></h3>
+
+    <div class="mb-3">
+        {% if detection_running %}
+            <a class="btn btn-danger" href="/stop">Stop Detection</a>
+        {% else %}
+            <a class="btn btn-success" href="/start">Start Detection</a>
+        {% endif %}
+        <a class="btn btn-primary" href="/download-log">Download Log Book</a>
+    </div>
+
+    <h3>Detection Log</h3>
+    <div>{{ table | safe }}</div>
+
+    <h3 class="mt-4">Detected ID Card Images</h3>
+    <div class="row">
+        {% for img in images %}
+        <div class="col-md-3 mb-3">
+            <img src="{{ url_for('static', filename='images/' ~ img) }}" class="img-fluid rounded border">
+            <p class="text-center">{{ img }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
