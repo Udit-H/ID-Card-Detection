@@ -6,7 +6,7 @@ This project is a **smart lab entry management system** that combines **YOLOv8-b
 - YOLOv8-powered ID card detection using OpenCV  
 - Arduino integration for entry/exit tracking  
 - Flask-based web dashboard for monitoring occupancy  
-- Configurable maximum occupancy limit (default: 50)  
+- Configurable maximum occupancy limit
 - Automatic snapshot saving of detected ID cards  
 - Real-time occupancy logging
   
